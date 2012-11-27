@@ -1,0 +1,46 @@
+\section{Documentation Generators}
+
+\subsection{Markup}
+
+Most documentation generators seem to employ some sort of a markup language for
+annotation. We distinguish between the following markup language types:
+
+\begin{description}[\setleftmargin{90pt}\setlabelstyle{\bf}]
+
+\item [Tag] Tag-based markup languages use (named or unnamed) begin- and
+end-tags to annotate comment strings; for instance, XML-based markup, or \TeX{}
+groups.
+
+\item [Keyword] Keyword-based markup languages use keywords to annotate comment
+strings. A keyword initialises an annotation, while a special charater, e.g.
+line break, ends the said annotation.
+
+A keyword may also initialise a sequence of annotations (including the empty
+sequence). For instance, the \texttt{@param} annotation in javadoc, consumes
+the subsequent non-broken string as a parameter name, before consuming the
+subsequent non-line-broken string as a comment for that parameter.
+
+\item [Mixed] An instructive example of a mixed markup language is \TeX{}.
+
+\end{description}
+
+Of course, this categorisation is rather superfluous, as keyword-based markup
+is just a special case of tag-based markup. Keywords that initialise a sequence
+of annotations can be seen as equivalent to tags with particular mandatory
+children tags.
+
+\subsection{Generators}
+
+\subsubsection{javadoc}
+
+\subsubsection{Sphinx}
+
+\subsubsection{Doxygen}
+
+\subsubsection{Sandcastle}
+
+\subsubsection{Red Gate SQL Doc}
+
+\subsubsection{Haddock}
+
+\subsubsection{man}
