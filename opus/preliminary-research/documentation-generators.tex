@@ -33,6 +33,27 @@ children tags.
 
 \subsubsection{javadoc}
 
+javadoc is a documentation generator for the
+Java\textsuperscript{\texttrademark} programming language. It employs a
+keyword-based mark-up language for the documentation of the API exposed by Java
+source code. The output of the generator is a set of hyperlinked static HTML
+pages.
+
+The documentation hierarchy is \begin{inparaenum}[(1)] \item fields,
+constructors and methods, \item classes, interfaces and enums, and \item
+packages\end{inparaenum}. Most mark-up constructs concern themselves with the
+first element of the hierarchy, describing the uses of the fields; the
+parameters, assumptions, guarantees and failure scenarios of methods (where
+constructors are but fancy methods).
+
+javadoc makes no assumptions about the source code domain, beyond the
+underlying programming language being Java. The documentation generator is not
+easily extensible with new mark-up constructs. Although it is possible, it
+requires programming against the javadoc API --- a tedious task for the common
+administrator or project leader. Nor does the documentation generator allow to
+enforce documentation standards, such as mandatory mark-up of the methods' time
+and space complexities.
+
 \subsubsection{Sphinx}
 
 \subsubsection{Doxygen}
@@ -41,6 +62,12 @@ children tags.
 
 \subsubsection{Red Gate SQL Doc}
 
+Red Gate SQL Doc is a commercial documentation generator for SQL-based databases. 
+
 \subsubsection{Haddock}
 
 \subsubsection{man}
+
+man is a manual paging system for *nix systems.
+
+\subsubsection{Pandoc}
