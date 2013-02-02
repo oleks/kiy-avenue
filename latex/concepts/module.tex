@@ -1,0 +1,40 @@
+\section{Module}
+
+The lack of a general consensus on the definition of the ``module'' concept,
+does not stop various programming language implementers from implementing what
+they themselves understand to be a ``module''\cite{list-of-modular-pls}. We
+wish to disregard such discrepancies and state a unifying definition, which may
+or may not correspond to the actual ``module'' concept in any given programming
+language.
+
+We derive the definition from Alan C. Kay's stated first encounter of a
+module\cite[I. 1960-66--Early OOP and other formative ideas of the
+sixties]{smalltalk}:
+
+\begin{definition} A module allows us to define abstract data
+types.\end{definition}
+
+In other words, a module is a construct that allows us to define types and
+adjacent procedures for constructing, accessing, modifying, and destructing
+instances of those types. The modification operation may not always be defined
+(indicating an immutable type), and may sometimes interleave with an accessing
+operation (indicating bad programming style). The underlying data
+representation, for all intents and purposes, is hidden.
+
+For instance, in Java, a class is a module, while \cite{jsr-277} and
+\cite{jsr-294} define a module to be a kind of ``superpackage'', aimed at
+easing JAR hell\footnotemark. Both are valid interpretations of the module
+concept. While language implementers must ensure not to confuse the programmer
+(and compiler) by giving two different concepts the same name, we seek a
+most-general definition of the module concept. As another example, a Haskell
+module corresponds quite seamlessly to the above definition. 
+
+\footnotetext{For an explanation, see
+\url{http://en.wikipedia.org/wiki/Java\_Classloader\#JAR\_hell}.}
+
+The types and procedures aside, modules also have names and typically reside in
+namespaces, i.e. reside in a module hierarchy.
+
+\begin{definition}
+A namespace is a named group of unique names.
+\end{definition}
